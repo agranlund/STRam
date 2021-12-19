@@ -9,9 +9,15 @@ Tested on a C070243 Rev.I motherboard, your mileage may vary.
 ----------------------------------------------------------------------------
 IMPORTANT:
 ----------------------------------------------------------------------------
+1)
 There is a misstake on this board that needs fixing with
 a bodge wire. See "board_fix.jpg" for where to solder
 that wire.
+
+2)
+The board must be soldered directly to the motherboard.
+Do not install sockets as there will not be enough clearance for the keyboard.
+
 
 
 ----------------------------------------------------------------------------
