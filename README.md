@@ -1,54 +1,55 @@
-----------------------------------------------------------------------------
-4MB RAM expansion for Atari 520ST(M)
-(c)2020, Anders Granlund
-----------------------------------------------------------------------------
-Tested on a C070243 Rev.I motherboard, your mileage may vary.
-----------------------------------------------------------------------------
+
+[fixing with a bodge wire]: /board_fix.jpg
 
 
-----------------------------------------------------------------------------
-IMPORTANT:
-----------------------------------------------------------------------------
-1)
-There is a misstake on this board that needs fixing with
-a bodge wire. See "board_fix.jpg" for where to solder
-that wire.
+# Atari 520ST(M)<br>4MB RAM Expansion
 
-2)
-The board must be soldered directly to the motherboard.
-Do not install sockets as there will not be enough clearance for the keyboard.
+*Tested on* ***C070243 Rev.I*** *, your mileage may vary.*
 
+---
 
+### Important
 
-----------------------------------------------------------------------------
-BOM:
-----------------------------------------------------------------------------
-C1-C6 = 100nF (0805 size)
-R1-R2 = 68 ohm (0805 size)
-R3 = 33 ohm (0805 size)
-2x 5118160 DRAM's in SOJ42 package
+1. The board needs **[fixing with a bodge wire]**
 
+2. The expansion board **must** be installed<br>
+   directly onto the motherboard.<br>
 
-----------------------------------------------------------------------------
-HOWTO:
-----------------------------------------------------------------------------
+   Using sockets **won't** leave enough<br>clearance for the keyboard
 
-* Desolder the existing RAM and solder the new board in
-place. 
+---
 
-* Solder the bodge wire as seen in "board_fix.jpg"
+### BOM
 
-* Solder the four wires from the RAM board header
-to the motherboard (MAD9, CAS1L, CAS1H, RAS1)
+|    |    Component     | Value | Size | Package |
+|:--:|:----------------:|:-----:|:----:|:-------:|
+|    | **C1** - **C6**  | 100nF | 0805 |         |
+|    | **R1** - **R2**  |   68Ω | 0805 |         |
+|    |      **R3**      |   33Ω | 0805 |         |
+| 2x | **5118160 DRAM** |       |      |   SOJ42 |
 
-All four signals can be found on the MMU and you can solder
-to the socket pins on the underside of the motherboard.
-Alternatively you may find solder points for CAS1L,CAS1H,RAS1
-on the topside on some motherboards but MAD9 is normally only
-found on the MMU.
+---
 
-MMU pins:
-RAS1  = 18
-CAS1L = 21
-CAS1H = 22
-MAD9  = 64
+### Installation
+
+- De-solder the existing RAM.
+
+- Solder the expansion board in place.
+
+- Solder the four wires from the expansion<br>
+  board to the motherboard.
+
+  Signals: **MAD9**, **CAS1L**, **CAS1H**, **RAS1**
+
+  **MAD9** can usually only be found on the **MMU**
+
+  The **CAS** & **RAS** pins can be soldered to on the<br>
+  underside of the motherboard as well as,<br>
+  ***on some boards***, on the topside as well.
+
+    |  Name | MMU Pin |
+    |:-----:|:-------:|
+    |  RAS1 |    18   |
+    | CAS1L |    21   |
+    | CAS1H |    22   |
+    |  MAD9 |    64   |
